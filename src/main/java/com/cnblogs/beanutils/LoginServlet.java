@@ -17,6 +17,8 @@ import com.cnblogs.json.pojo.Person;
 
 public class LoginServlet extends HttpServlet {
     private LoginService Ls;
+    
+    
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
             doPost(request, response);
@@ -45,6 +47,9 @@ public class LoginServlet extends HttpServlet {
         Person existu = null;
         //调用dao包中的方法
         try {
+        	if(Ls == null){
+        		Ls = new LoginService();
+        	}
             existu =Ls.login(u);
         } catch (Exception e) {
             e.printStackTrace();

@@ -4,8 +4,6 @@ import com.cnblogs.json.pojo.Person;
 
 public class LoginService {
     //这是我的业务层
-    // 调用dao包中的方法
-    private Person dao;
 
     @SuppressWarnings("unused")
 	public Person login(Person u) {
